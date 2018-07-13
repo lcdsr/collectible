@@ -1,0 +1,33 @@
+
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+        <ion-button (click)="dismiss()">
+          <ion-icon slot="icon-only" name="close"></ion-icon>
+        </ion-button>
+    </ion-buttons>
+    <ion-title>Register</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+ 
+  <div>Affin d'utiliser l'application veuillez vous enregistrer ! </div>
+
+    <ion-item>
+      <ion-label position="floating">E-mail</ion-label>
+      <ion-input [(ngModel)]="inputEmail" ngDefaultControl></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Password</ion-label>
+      <ion-input type="password" [(ngModel)]="inputPassword" ngDefaultControl></ion-input>
+    </ion-item>
+    <ion-button expand="block" color="secondary" (click)="registerUser()">S'inscrire</ion-button>
+
+
+
+   <!-- <div class="header344" *ngIf="base64Image"  [ngStyle]="{'background-image': 'url(' + base64Image + ')'}"></div>-->
+   
+   
+   <div *ngIf="img" [ngStyle]="{'background-color':'red','height':'400px','width':'100%','background-image': 'url(' + img + ')', 'background-position': 'center','background-size':'cover'}"></div>
+</ion-content>

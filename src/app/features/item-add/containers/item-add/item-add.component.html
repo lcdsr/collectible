@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar color="primary">
+
+    <ion-buttons slot="start">
+
+      <ion-button (click)="back()">
+        <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+      </ion-button>
+
+    </ion-buttons>
+
+    <ion-title>
+      New Item
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div id="monid" style="width:100%;height:325px;background-color:rgba(192,192,192,0.3);"></div>
+  <!-- <img *ngIf="img" src="{{img}}" alt=""[ngStyle]="{'height':'360px'}">
+  <div *ngIf="img" [ngStyle]="{'background-color':'red','height':'360px','width':'100%','background-image': 'url(' + img + ')', 'background-position': 'center','background-size':'cover'}"></div> -->
+  <button class="cameraButton" (click)="startCamera()"> <ion-icon slot="icon-only" name="camera"></ion-icon></button>
+  <!-- <ion-button *ngIf="cameraPlugin?.img?.src" (click)="savePicture()">Sauvegarder Photo</ion-button> -->
+  <ion-item>
+    <ion-label position="floating">Tags</ion-label>
+    <ion-input name="inputT" [(ngModel)]="inputTag" ngDefaultControl></ion-input>
+  </ion-item>
+  <br>
+  <ion-chip *ngFor="let tag of arrayTag">
+    <ion-label>{{tag}}</ion-label>
+    <ion-chip-button (click)="removeTage(tag)">
+      <ion-icon name="close"></ion-icon>
+    </ion-chip-button>
+  </ion-chip>
+  <br>
+  <ion-button (click)="addTag()">
+    add
+  </ion-button>
+  <br>
+</ion-content>
+<ion-button expand="full" (click)="addItem()" class="fbuton" color="secondary">Save</ion-button>

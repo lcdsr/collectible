@@ -1,0 +1,19 @@
+.fbuton{
+    margin:0px !important;
+}
+.breadCrumbs{
+    padding-left:5px; 
+    margin-bottom:0px;
+    margin-top:14px;
+}
+.search-autocomplete{
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    /* margin: 0.3rem; */
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 999;
+    }
+ 

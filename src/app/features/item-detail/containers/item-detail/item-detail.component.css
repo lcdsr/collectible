@@ -1,0 +1,15 @@
+.item_detail_tags{
+    width: 100%;
+    padding-top: 10px;
+    padding-left: 5px;
+    height: 55px;
+    background-color: rgba(0,0,0,0.3);
+    color: white;
+    position: absolute;
+    z-index: 999;
+    top: 270px;
+    font-size: 23px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar color="primary">
+
+      <ion-buttons slot="start">
+
+            <ion-button (click)="dismiss()">
+              <ion-icon slot="icon-only" name="close"></ion-icon>
+            </ion-button>
+
+        </ion-buttons>
+        <ion-buttons slot="end">
+          <ion-button (click)="del()">
+            <ion-icon slot="icon-only" name="trash" ></ion-icon>
+          </ion-button>
+      </ion-buttons>
+    <ion-title>
+      <!-- Item Name -->
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content *ngFor="let item of itemss$|async">
+<!-- {{item$|async|json}} -->
+  <div [ngStyle]="{'height':'325px','width':'100%','background-image': 'url(' + item.imageUrl + ')', 'background-position': 'center','background-size':'cover'}"></div>
+
+  <!-- <ion-img style="width: 100%; height: 360px;" src="http://p3.storage.canalblog.com/31/12/1095301/92799320_o.jpg"></ion-img> -->
+  <!-- récupéré le champs tags -->
+  <div text-center class="item_detail_tags">{{item.tags}}</div>
+  <!-- bonne taille pour le mobile : -->
+  <!-- <ion-img  style="width: 100%; height: 100%;" src="https://planet-vie.ens.fr/sites/default/files/2017-01/Manchot%20empereur_CC-BY-SA_Samuel%20Blanc_Wikimedia.jpg"></ion-img> -->
+  <ion-img style="width: 100%; height: 255px" src="https://zupimages.net/up/18/28/jabl.png"></ion-img>
+</ion-content>

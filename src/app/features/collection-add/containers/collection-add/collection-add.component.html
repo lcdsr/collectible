@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+            <ion-button (click)="dismiss()">
+              <ion-icon slot="icon-only" name="close"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+    <ion-title>
+      New Collection
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content padding>
+    <ion-item>
+        <ion-label position="floating">Collection Name</ion-label>
+        <ion-input [(ngModel)]="inputColName" ngDefaultControl required></ion-input>
+        
+      </ion-item>
+      <div>
+        <br>
+      </div>
+  <ion-button padding (click)="save()">save</ion-button>
+</ion-content>
+

@@ -1,0 +1,17 @@
+.cameraButton{
+    background-color: transparent;
+    border: none;
+    color:#ff8a65;
+    /* color: white; */
+    /* padding: 20px 20px; */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 50% 50%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: -60px;
+    left: 43%;
+    font-size: 40px;
+}
